@@ -4,7 +4,7 @@ export const getCategories = (state) => state[MODULE_NAME].categories;
 const initialState = {
   categories: [
     {
-      id: `${Math.random()}${Date.now()}`,
+      id: 1,
       titleFirst: 'Women',
       titleSecond: 'Fashion',
       subTitle: 'Spring Season. Opened!',
@@ -12,7 +12,7 @@ const initialState = {
         'https://aykhanhajiyev.com/assets/ecommerceapp/women_fashion.jpg',
     },
     {
-      id: `${Math.random()}${Date.now()}`,
+      id: 2,
       titleFirst: 'Men',
       titleSecond: 'Fashion',
       subTitle: 'Pure. Old Fashioned.',
@@ -20,7 +20,7 @@ const initialState = {
         'https://aykhanhajiyev.com/assets/ecommerceapp/men_fashion.jpeg',
     },
     {
-      id: `${Math.random()}${Date.now()}`,
+      id: 3,
       titleFirst: 'Kids',
       titleSecond: 'Fashion',
       subTitle: 'For the smallest.',

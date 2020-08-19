@@ -11,6 +11,7 @@ const mapStateToProps = (state) => ({
 export const CategoryScreen = connect(mapStateToProps)(
   ({navigation, route, products}) => {
     const categoryName = route.params.name;
+    const categoryId = route.params.id;
     const [productsByCategory, setProductsByCategory] = useState([]);
     const [loader, setLoader] = useState(false);
     useEffect(() => {
@@ -19,7 +20,7 @@ export const CategoryScreen = connect(mapStateToProps)(
       });
       setProductsByCategory(
         products.filter((product) => {
-          if (product.category.toLowerCase() === categoryName.toLowerCase()) {
+          if (product.categoryId === categoryId) {
             return product;
           }
         }),
@@ -38,6 +39,7 @@ export const CategoryScreen = connect(mapStateToProps)(
             priceTwo={item.priceTwo}
             onPress={() => {
               navigation.navigate('Detail', {
+                detailId: item.id,
                 detailImageUri: item.imageUri,
                 detailTitle: item.name,
                 detailPriceOne: item.priceOne,

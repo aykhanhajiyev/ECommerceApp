@@ -77,7 +77,7 @@ export const HomeStack = () => {
           ),
         })}
       />
-      <Screen name="Basket" component={BasketScreen} />
+      <Screen name="Basket" component={BasketScreen} options={{headerTitle:"Basket"}} />
     </Navigator>
   );
 };

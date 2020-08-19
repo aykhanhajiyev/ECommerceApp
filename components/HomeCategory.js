@@ -12,21 +12,23 @@ const {width} = Dimensions.get('window');
 
 export const HomeCategory = ({
   navigation,
+  categoryId,
   imageUri,
   titleFirst,
   titleSecond,
   subTitle,
 }) => {
-//   const [imageDimensions, setImageDimensions] = useState({
-//     width: Image.resolveAssetSource(imageUri).width,
-//     height: Image.resolveAssetSource(imageUri).height,
-//   });
+  //   const [imageDimensions, setImageDimensions] = useState({
+  //     width: Image.resolveAssetSource(imageUri).width,
+  //     height: Image.resolveAssetSource(imageUri).height,
+  //   });
   return (
     <TouchableOpacity
       activeOpacity={0.8}
       onPress={() =>
         navigation.navigate('Category', {
           name: titleFirst,
+          id: categoryId,
         })
       }
       style={{
